@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Speed Test</h1>
+
+        <div class="settings">
+            <div class="level-selection">
+                <label for="level">Select Level:</label>
+                <select id="level">
+                    <option value="easy">Easy (60s)</option>
+                    <option value="medium">Medium (45s)</option>
+                    <option value="hard">Hard (30s)</option>
+                </select>
+            </div>
+
+            <div class="mode-selection">
+                <label for="mode">Select Mode:</label>
+                <select id="mode">
+                    <option value="normal">Normal</option>
+                    <option value="invisible">Invisible (No input shown)</option>
+                    <option value="no-backspace">No Backspace</option>
+                    <option value="story">Story Mode (Keep going)</option>
+                </select>
+            </div>
+            <button id="start-test-btn">Start Test</button>
+        </div>
+
+        <div class="countdown-overlay" id="countdown-overlay">
+            <span id="countdown-display">3</span>
+        </div>
+
+        <div class="test-area">
+            <div id="quote-display" class="quote-display">
+                Click 'Start Test' to begin!
+            </div>
+            <textarea id="text-input" class="text-input" placeholder="Start typing here..." autofocus disabled></textarea>
+            <div id="timer-display" class="timer-display">Time: 0s</div>
+            <div id="result-display" class="result-display"></div>
+            <button id="stop-test-btn" class="stop-button" style="display: none;">Stop Test</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
